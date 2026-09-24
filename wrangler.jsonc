@@ -24,12 +24,12 @@
   ],
   "routes": [
     {
-      "pattern": "lumisanepal.com/*",
-      "zone_name": "lumisanepal.com"
+      "pattern": "lumisanepal.com",
+      "custom_domain": true
     },
     {
-      "pattern": "www.lumisanepal.com/*",
-      "zone_name": "lumisanepal.com"
+      "pattern": "www.lumisanepal.com",
+      "custom_domain": true
     }
   ]
 }

@@ -59,8 +59,8 @@ export function CountdownTimer({
 
   if (!mounted) {
     return (
-      <div className="flex justify-center items-center gap-4 py-3 opacity-0">
-        <span className="text-3xl font-light">--</span>
+      <div className="flex justify-center items-center py-4 min-h-[90px] opacity-0">
+        <span className="font-serif-lux text-5xl font-light">00</span>
       </div>
     );
   }
@@ -68,36 +68,38 @@ export function CountdownTimer({
   if (timeLeft.isOpened) {
     return (
       <div className="py-4 text-center">
-        <p className="font-serif-lux text-3xl md:text-5xl text-gold-shimmer font-light tracking-wide">
-          The Boutique Doors Are Open.
+        <p className="font-serif-lux text-3xl sm:text-5xl font-light tracking-wide text-white">
+          We’re open.
         </p>
       </div>
     );
   }
 
+  const pad = (n: number) => String(n).padStart(2, "0");
+
   const units = [
-    { label: "DAYS", value: String(timeLeft.days).padStart(2, "0") },
-    { label: "HOURS", value: String(timeLeft.hours).padStart(2, "0") },
-    { label: "MINUTES", value: String(timeLeft.minutes).padStart(2, "0") },
-    { label: "SECONDS", value: String(timeLeft.seconds).padStart(2, "0") },
+    { label: "days", value: pad(timeLeft.days) },
+    { label: "hours", value: pad(timeLeft.hours) },
+    { label: "minutes", value: pad(timeLeft.minutes) },
+    { label: "seconds", value: pad(timeLeft.seconds) },
   ];
 
   return (
     <div
-      className="flex items-center justify-center pt-2 pb-1"
+      className="flex justify-center items-center my-6"
       role="timer"
-      aria-label="Countdown to Lumisa opening"
+      aria-label="Time until opening"
     >
-      <div className="flex items-center divide-x divide-white/10 bg-black/40 backdrop-blur-md px-3 py-2 rounded-2xl border border-white/5 shadow-2xl">
+      <div className="flex divide-x divide-white/16">
         {units.map((unit, idx) => (
           <div
             key={idx}
-            className="flex flex-col items-center px-3 sm:px-6 md:px-8 first:pl-2 last:pr-2 group"
+            className="flex flex-col items-center px-3 sm:px-6 md:px-7 first:pl-0 last:pr-0"
           >
-            <span className="font-serif-lux text-3xl sm:text-5xl md:text-6xl font-light tracking-tight text-white group-hover:text-amber-200 transition-colors duration-300 tabular-nums">
+            <span className="font-serif-lux font-light text-4xl sm:text-6xl md:text-7xl leading-none text-white tabular-nums tracking-tight">
               {unit.value}
             </span>
-            <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.2em] text-neutral-400 mt-1 font-medium">
+            <span className="text-[11px] sm:text-xs tracking-[0.08em] text-neutral-400 mt-2 font-light lowercase">
               {unit.label}
             </span>
           </div>
