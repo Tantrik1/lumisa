@@ -20,9 +20,9 @@ export function SpotlightHero() {
         aria-hidden="true"
       />
 
-      {/* Tint Black to Background for Clear Contrast & Vivid Depth */}
+      {/* Moderate Dark Tint: 65% Mobile, 55% Desktop for Crisp Contrast & Vivid Depth */}
       <div
-        className="absolute inset-0 -z-10 bg-black/[0.52] md:bg-black/[0.46] pointer-events-none transition-colors"
+        className="absolute inset-0 -z-10 bg-black/65 md:bg-black/55 pointer-events-none transition-colors"
         aria-hidden="true"
       />
 
