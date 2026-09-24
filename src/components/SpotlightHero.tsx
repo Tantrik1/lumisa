@@ -22,7 +22,7 @@ export function SpotlightHero() {
 
       {/* Small Tint Black to Background for Clear Contrast & Vivid Depth */}
       <div
-        className="absolute inset-0 -z-10 bg-black/40 pointer-events-none"
+        className="absolute inset-0 -z-10 bg-black/[0.44] md:bg-black/40 pointer-events-none transition-colors"
         aria-hidden="true"
       />
 
