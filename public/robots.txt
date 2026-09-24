@@ -1,0 +1,26 @@
+# Robots.txt for Lumisa Nepal
+# Allow search engines & AI crawlers
+
+User-agent: *
+Allow: /
+
+# AI Crawlers for Answer Engine Optimization (AEO)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+Sitemap: https://lumisanepal.com/sitemap.xml
