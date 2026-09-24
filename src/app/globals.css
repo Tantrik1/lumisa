@@ -1,0 +1,132 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --black: #000000;
+    --noir: #070708;
+    --charcoal: #121214;
+    --white: #ffffff;
+    --ash: #a3a3a3;
+    --smoke: #6b6b6b;
+    --gold: #d4af37;
+    --gold-light: #f5e7c4;
+    --gold-glow: rgba(212, 175, 55, 0.25);
+    --line: rgba(255, 255, 255, 0.14);
+    --pad: clamp(20px, 5vw, 80px);
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: env(safe-area-inset-top, 0px);
+    -webkit-text-size-adjust: 100%;
+    background-color: var(--black);
+    color: var(--white);
+  }
+
+  body {
+    background-color: var(--black);
+    color: var(--white);
+    font-family: var(--font-jost), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: rgba(212, 175, 55, 0.35);
+    color: #ffffff;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(212, 175, 55, 0.5);
+}
+
+/* Luxury Serif Typography */
+.font-serif-lux {
+  font-family: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
+}
+
+/* Shimmer animations */
+@keyframes goldShimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.text-gold-shimmer {
+  background: linear-gradient(
+    90deg,
+    #cfc7b0 0%,
+    #fcedc7 25%,
+    #d4af37 50%,
+    #fcedc7 75%,
+    #cfc7b0 100%
+  );
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: goldShimmer 7s ease-in-out infinite;
+}
+
+@keyframes drip {
+  0% {
+    top: -44px;
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    top: 44px;
+    opacity: 0;
+  }
+}
+
+.animate-drip {
+  animation: drip 2.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.65;
+    transform: scale(1.04);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 6s ease-in-out infinite;
+}
+
+/* Smooth Mask Transition */
+.mask-spotlight {
+  -webkit-mask-image: radial-gradient(circle var(--r, 280px) at var(--x, 50%) var(--y, 60%), #000 0%, rgba(0, 0, 0, 0.6) 45%, transparent 100%);
+  mask-image: radial-gradient(circle var(--r, 280px) at var(--x, 50%) var(--y, 60%), #000 0%, rgba(0, 0, 0, 0.6) 45%, transparent 100%);
+}

@@ -1,0 +1,35 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "lumisa",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2024-12-30",
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "account_id": "ab94ca7fe2714291ff48ec76111769e3",
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+  "kv_namespaces": [
+    {
+      "binding": "LUMISA_WAITLIST",
+      "id": "e02af54f9d74437ba6c63fb39335378d"
+    }
+  ],
+  "d1_databases": [
+    {
+      "binding": "lumisa_db",
+      "database_name": "lumisa-db",
+      "database_id": "fdac269d-19b5-4b67-8359-6746ce6d69c1"
+    }
+  ],
+  "routes": [
+    {
+      "pattern": "lumisanepal.com/*",
+      "zone_name": "lumisanepal.com"
+    },
+    {
+      "pattern": "www.lumisanepal.com/*",
+      "zone_name": "lumisanepal.com"
+    }
+  ]
+}
