@@ -286,7 +286,10 @@ export default function Home() {
       </section>
 
       {/* Centered Luxury Footer */}
-      <footer className="pt-6 pb-16 sm:pt-10 sm:pb-20 px-6 max-w-xl mx-auto flex flex-col items-center text-center space-y-4 text-xs text-neutral-400 font-light">
+      <footer className="pt-8 pb-16 sm:pt-12 sm:pb-20 px-6 max-w-xl mx-auto flex flex-col items-center text-center space-y-4 text-xs text-neutral-400 font-light">
+        {/* Small Minimal Divider */}
+        <div className="w-16 sm:w-20 h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent mb-2 sm:mb-4" />
+
         {/* Social Links Centered */}
         <div className="flex items-center gap-5 text-neutral-300">
           <a
