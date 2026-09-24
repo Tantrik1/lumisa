@@ -94,9 +94,9 @@ export function CountdownTimer({
         {units.map((unit, idx) => (
           <div
             key={idx}
-            className="flex flex-col items-center px-3 sm:px-6 md:px-7 first:pl-0 last:pr-0"
+            className="flex flex-col items-center px-2.5 sm:px-5 md:px-7 first:pl-0 last:pr-0"
           >
-            <span className="font-serif-lux font-light text-4xl sm:text-6xl md:text-7xl leading-none text-white tabular-nums tracking-tight">
+            <span className="font-serif-lux font-light text-3xl sm:text-5xl md:text-7xl leading-none text-white tabular-nums tracking-tight">
               {unit.value}
             </span>
             <span className="text-[11px] sm:text-xs tracking-[0.08em] text-neutral-400 mt-2 font-light lowercase">
