@@ -71,7 +71,7 @@ export default function Home() {
       <section
         id="collections"
         aria-labelledby="collections-heading"
-        className="pt-20 sm:pt-28 pb-8 sm:pb-12 px-6 sm:px-10 md:px-16 max-w-7xl mx-auto"
+        className="pt-20 sm:pt-28 pb-12 sm:pb-16 px-6 sm:px-10 md:px-16 max-w-7xl mx-auto"
       >
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 sm:mb-14">
           <h2
@@ -165,7 +165,7 @@ export default function Home() {
       {/* Statement Section: Centered Editorial Quote */}
       <section
         aria-label="About Lumisa"
-        className="pt-4 sm:pt-8 pb-20 sm:pb-28 px-6 sm:px-10 max-w-4xl mx-auto flex flex-col items-center text-center"
+        className="pt-8 sm:pt-14 pb-20 sm:pb-28 px-6 sm:px-10 max-w-4xl mx-auto flex flex-col items-center text-center"
       >
         <div className="w-12 h-[1px] bg-gradient-to-r from-transparent via-amber-200/40 to-transparent mx-auto mb-6" />
         <blockquote className="space-y-4 text-center">
@@ -187,7 +187,7 @@ export default function Home() {
       <section
         id="signup"
         aria-labelledby="f-title"
-        className="pt-4 sm:pt-8 pb-24 sm:pb-36 px-4 sm:px-8 md:px-12 max-w-6xl mx-auto"
+        className="pt-6 sm:pt-10 pb-20 sm:pb-28 px-4 sm:px-8 md:px-12 max-w-6xl mx-auto"
       >
         <div className="relative rounded-3xl border border-white/15 bg-gradient-to-br from-neutral-900/90 via-black to-neutral-950/95 backdrop-blur-xl overflow-hidden shadow-[0_25px_80px_rgba(0,0,0,0.85)]">
           {/* Subtle gold ambient glow behind card */}
@@ -285,30 +285,45 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer without harsh divider */}
-      <footer className="py-12 px-6 sm:px-10 md:px-16 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-400 font-light">
-        <span>&copy; {new Date().getFullYear()} Lumisa. All rights reserved.</span>
-        <div className="flex items-center gap-4 text-neutral-300">
+      {/* Centered Luxury Footer */}
+      <footer className="pt-6 pb-16 sm:pt-10 sm:pb-20 px-6 max-w-xl mx-auto flex flex-col items-center text-center space-y-4 text-xs text-neutral-400 font-light">
+        {/* Social Links Centered */}
+        <div className="flex items-center gap-5 text-neutral-300">
           <a
             href="https://instagram.com/lumisa_official"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-white transition-colors"
+            className="hover:text-white transition-colors tracking-wide"
           >
-            @lumisa_official
+            Instagram
           </a>
-          <span>&bull;</span>
+          <span className="text-neutral-600">&bull;</span>
           <a
             href="https://facebook.com/lumisa.official"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-white transition-colors"
+            className="hover:text-white transition-colors tracking-wide"
           >
-            @lumisa.official
+            Facebook
           </a>
-          <span>&bull;</span>
-          <span className="italic font-serif-lux">For the woman you are</span>
+          <span className="text-neutral-600">&bull;</span>
+          <a
+            href="#top"
+            className="hover:text-white transition-colors tracking-wide"
+          >
+            Back to top ↑
+          </a>
         </div>
+
+        {/* Signature Editorial Tagline */}
+        <p className="italic font-serif-lux text-base sm:text-lg text-neutral-300 tracking-wide">
+          For the woman you are
+        </p>
+
+        {/* Copyright */}
+        <p className="text-[11px] text-neutral-500 tracking-wider">
+          &copy; {new Date().getFullYear()} Lumisa. All rights reserved.
+        </p>
       </footer>
 
       {/* Lookbook Modal */}
