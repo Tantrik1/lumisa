@@ -4,10 +4,12 @@ import { useEffect, useState } from "react";
 
 interface CountdownTimerProps {
   targetDate?: string;
+  daysCount?: number;
 }
 
 export function CountdownTimer({
-  targetDate = "2026-11-15T10:00:00+05:45",
+  targetDate,
+  daysCount = 30,
 }: CountdownTimerProps) {
   const [timeLeft, setTimeLeft] = useState<{
     days: number;
@@ -16,7 +18,7 @@ export function CountdownTimer({
     seconds: number;
     isOpened: boolean;
   }>({
-    days: 0,
+    days: 30,
     hours: 0,
     minutes: 0,
     seconds: 0,
@@ -27,7 +29,11 @@ export function CountdownTimer({
 
   useEffect(() => {
     setMounted(true);
-    const target = new Date(targetDate).getTime();
+
+    // Target is either targetDate or fixed 30 days target
+    const target = targetDate
+      ? new Date(targetDate).getTime()
+      : Date.now() + (daysCount * 24 * 60 * 60 * 1000);
 
     function update() {
       const diff = target - Date.now();
@@ -55,12 +61,12 @@ export function CountdownTimer({
     update();
     const interval = setInterval(update, 1000);
     return () => clearInterval(interval);
-  }, [targetDate]);
+  }, [targetDate, daysCount]);
 
   if (!mounted) {
     return (
       <div className="flex justify-center items-center py-4 min-h-[90px] opacity-0">
-        <span className="font-serif-lux text-5xl font-light">00</span>
+        <span className="font-serif-lux text-5xl font-light">30</span>
       </div>
     );
   }
@@ -86,15 +92,15 @@ export function CountdownTimer({
 
   return (
     <div
-      className="flex justify-center items-center my-6"
+      className="flex justify-center items-center my-4"
       role="timer"
       aria-label="Time until opening"
     >
-      <div className="flex divide-x divide-white/16">
+      <div className="flex divide-x divide-white/20">
         {units.map((unit, idx) => (
           <div
             key={idx}
-            className="flex flex-col items-center px-2.5 sm:px-5 md:px-7 first:pl-0 last:pr-0"
+            className="flex flex-col items-center px-3 sm:px-6 md:px-7 first:pl-0 last:pr-0"
           >
             <span className="font-serif-lux font-light text-3xl sm:text-5xl md:text-7xl leading-none text-white tabular-nums tracking-tight">
               {unit.value}

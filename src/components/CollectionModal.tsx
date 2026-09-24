@@ -143,14 +143,14 @@ export function CollectionModal({
             {/* Action Button */}
             <div className="pt-4">
               <a
-                href="#signup-section"
+                href="#signup"
                 onClick={() => {
                   onSelectInterest?.(item.id);
                   onClose();
                 }}
-                className="w-full inline-flex items-center justify-center gap-2 py-3 px-6 rounded-xl bg-white text-black hover:bg-amber-100 font-medium text-xs tracking-wider uppercase transition-colors"
+                className="w-full inline-flex items-center justify-center gap-2 py-3 px-6 rounded-xl bg-white text-black hover:bg-neutral-200 font-medium text-xs tracking-wider uppercase transition-colors"
               >
-                <span>Reserve VIP Access for {item.title}</span>
+                <span>Claim 10% Off for {item.title}</span>
               </a>
             </div>
           </div>
