@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState, useCallback } from "react";
+import Image from "next/image";
 import { CountdownTimer } from "@/components/CountdownTimer";
 
 export function SpotlightHero() {
@@ -124,18 +125,25 @@ export function SpotlightHero() {
         aria-hidden="true"
       />
 
-      {/* Hero Content: ONLY Title, Description, Countdown. No any other things. */}
+      {/* Hero Content: Real Logo, Description, Countdown. No any other things. */}
       <div className="relative z-10 w-full max-w-3xl mx-auto flex flex-col items-center">
-        {/* Title */}
-        <h1
-          id="hero-title"
-          className="font-serif-lux font-light text-5xl sm:text-7xl md:text-8xl lg:text-9xl text-white tracking-[-0.02em] leading-none drop-shadow-[0_4px_30px_rgba(0,0,0,0.7)]"
-        >
-          Lumisa
+        <h1 id="hero-title" className="sr-only">
+          Lumisa — Handbags, jewellery and accessories. Opening soon.
         </h1>
 
+        {/* Real Logo in Hero */}
+        <div className="relative w-[min(72vw,44svh,400px)] aspect-[900/820] mb-2 sm:mb-4">
+          <Image
+            src="/images/lumisa-logo-full.png"
+            alt="Lumisa — For the woman you are"
+            fill
+            priority
+            className="object-contain drop-shadow-[0_0_40px_rgba(0,0,0,0.6)]"
+          />
+        </div>
+
         {/* Description */}
-        <p className="font-serif-lux italic font-light text-lg sm:text-2xl md:text-3xl text-neutral-300 tracking-wide mt-4 sm:mt-6 max-w-xl mx-auto drop-shadow-[0_2px_16px_rgba(0,0,0,0.8)]">
+        <p className="font-serif-lux italic font-light text-lg sm:text-2xl md:text-3xl text-neutral-300 tracking-wide mt-2 sm:mt-3 max-w-xl mx-auto drop-shadow-[0_2px_16px_rgba(0,0,0,0.8)]">
           Handbags, jewellery and the finishing touches. Opening soon.
         </p>
 
