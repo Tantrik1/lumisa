@@ -183,69 +183,45 @@ export default function Home() {
         </blockquote>
       </section>
 
-      {/* Modern Creative Luxury 10% Inaugural Privilege Card */}
+      {/* Modern Luxury 10% Offer Card */}
       <section
         id="signup"
         aria-labelledby="f-title"
         className="pt-6 sm:pt-10 pb-20 sm:pb-28 px-4 sm:px-8 md:px-12 max-w-6xl mx-auto"
       >
-        <div className="relative rounded-3xl border border-white/15 bg-gradient-to-br from-neutral-900/90 via-black to-neutral-950/95 backdrop-blur-xl overflow-hidden shadow-[0_25px_80px_rgba(0,0,0,0.85)]">
+        <div className="relative rounded-3xl border border-white/10 bg-gradient-to-br from-neutral-900/90 via-black to-neutral-950/95 backdrop-blur-xl overflow-hidden shadow-[0_25px_80px_rgba(0,0,0,0.85)]">
           {/* Subtle gold ambient glow behind card */}
           <div className="absolute -top-32 -right-32 w-80 h-80 bg-amber-500/10 rounded-full blur-[100px] pointer-events-none" />
           <div className="absolute -bottom-32 -left-32 w-80 h-80 bg-amber-500/5 rounded-full blur-[100px] pointer-events-none" />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 items-stretch">
-            {/* Visual Column (5 cols on desktop) */}
-            <div className="relative lg:col-span-5 min-h-[320px] lg:min-h-[480px] overflow-hidden group">
+            {/* Visual Column: Clean, minimal, zero text overlays */}
+            <div className="relative lg:col-span-5 min-h-[280px] lg:min-h-[440px] overflow-hidden">
               <Image
                 src="/images/collection-accessories.webp"
-                alt="Lumisa Inaugural Privilege"
+                alt="Lumisa collection preview"
                 fill
                 sizes="(max-width: 1024px) 100vw, 42vw"
-                className="object-cover object-center transition-transform duration-1000 ease-out group-hover:scale-105"
+                className="object-cover object-center transition-transform duration-1000 ease-out hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent lg:bg-gradient-to-r lg:from-transparent lg:via-black/40 lg:to-black" />
-              
-              {/* Floating chic badge on image */}
-              <div className="absolute top-6 left-6 z-10">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] uppercase tracking-widest text-amber-200/90 bg-black/70 backdrop-blur-md border border-amber-300/30 font-medium">
-                  ✦ Opening Privilege
-                </span>
-              </div>
-
-              {/* Bottom tag on image */}
-              <div className="absolute bottom-6 left-6 right-6 z-10">
-                <p className="font-serif-lux text-xl sm:text-2xl italic text-white/95 drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
-                  The Inaugural Edit
-                </p>
-                <p className="text-xs text-neutral-300 font-light mt-1 drop-shadow-[0_1px_4px_rgba(0,0,0,0.9)]">
-                  Handcrafted pieces, packaged with intention. Complimentary delivery across Nepal.
-                </p>
-              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent lg:bg-gradient-to-r lg:from-transparent lg:to-black/30 pointer-events-none" />
             </div>
 
-            {/* Content & Form Column (7 cols on desktop) */}
+            {/* Content & Form Column: Minimal luxury, no eyebrows */}
             <div className="relative lg:col-span-7 p-7 sm:p-10 md:p-14 flex flex-col justify-center">
-              <div className="inline-flex items-center gap-2 mb-3">
-                <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse" />
-                <span className="text-[11px] uppercase tracking-[0.22em] text-amber-200/90 font-medium">
-                  Inaugural Guest Privilege
-                </span>
-              </div>
-
               <h2
                 id="f-title"
-                className="font-serif-lux text-3xl sm:text-4xl md:text-5xl font-light tracking-tight text-white leading-[1.15]"
+                className="font-serif-lux text-3xl sm:text-4xl md:text-5xl font-light tracking-tight text-white leading-tight"
               >
                 Enjoy 10% off your first order
               </h2>
 
-              <p className="text-neutral-300 text-sm sm:text-base font-light mt-3 max-w-lg leading-relaxed">
-                Join our private opening list with your email address or mobile number to unlock your instant 10% discount voucher and early lookbook access.
+              <p className="text-neutral-300 text-sm sm:text-base font-light mt-3 max-w-md leading-relaxed">
+                Join our opening list with your email address or mobile number to unlock your 10% voucher code and receive early access.
               </p>
 
               {/* The Interactive Signup Form */}
-              <div className="mt-7 w-full">
+              <div className="mt-7 w-full max-w-md">
                 <SignupForm
                   id="offer-contact"
                   source="inaugural-offer-card"
@@ -254,31 +230,11 @@ export default function Home() {
                 />
               </div>
 
-              {/* 3 Luxury Perks */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-7 mt-7 border-t border-white/10 text-neutral-400">
-                <div className="flex items-start gap-2.5">
-                  <span className="text-amber-300/80 text-sm mt-0.5">✦</span>
-                  <div>
-                    <h5 className="text-xs font-medium text-white tracking-wide">10% Voucher</h5>
-                    <p className="text-[11px] text-neutral-400 font-light mt-0.5">Instant code reveal</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-2.5">
-                  <span className="text-amber-300/80 text-sm mt-0.5">✦</span>
-                  <div>
-                    <h5 className="text-xs font-medium text-white tracking-wide">Private Preview</h5>
-                    <p className="text-[11px] text-neutral-400 font-light mt-0.5">Early lookbook access</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-2.5">
-                  <span className="text-amber-300/80 text-sm mt-0.5">✦</span>
-                  <div>
-                    <h5 className="text-xs font-medium text-white tracking-wide">Nepal Courier</h5>
-                    <p className="text-[11px] text-neutral-400 font-light mt-0.5">Complimentary delivery</p>
-                  </div>
-                </div>
+              {/* Minimal Perks Line */}
+              <div className="flex flex-wrap items-center gap-x-6 gap-y-2 pt-6 mt-6 border-t border-white/10 text-xs text-neutral-400 font-light">
+                <span>✦ Instant voucher code</span>
+                <span>✦ Early lookbook access</span>
+                <span>✦ Nationwide delivery</span>
               </div>
             </div>
           </div>
