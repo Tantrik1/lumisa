@@ -4,6 +4,9 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
+  experimental: {
+    allowedDevOrigins: ["192.168.1.64:3000", "localhost:3000"],
+  },
   eslint: {
     ignoreDuringBuilds: true,
   },

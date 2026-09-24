@@ -14,9 +14,9 @@ export function SpotlightHero() {
         Lumisa — Handbags, jewellery and accessories. Opening soon.
       </h1>
 
-      {/* High Quality Responsive Background: Mobile, Tablet, Desktop */}
+      {/* High Quality Hero Background: Same image across mobile, tablet, and desktop */}
       <div
-        className="absolute inset-0 -z-20 bg-cover bg-center md:bg-top bg-no-repeat bg-[url('/images/hero-mobile.webp')] md:bg-[url('/images/hero-tablet.webp')] lg:bg-[url('/images/hero-desktop.webp')]"
+        className="absolute inset-0 -z-20 bg-cover bg-center md:bg-top bg-no-repeat bg-[url('/images/hero-desktop.webp')]"
         aria-hidden="true"
       />
 
